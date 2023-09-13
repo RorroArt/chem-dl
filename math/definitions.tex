@@ -1,0 +1,73 @@
+% ---------------------------------------- %
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsthm}
+% Add the package for institution %
+\usepackage{authblk}
+% Add the package for bibliography %
+\usepackage{biblatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mdwlist}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{defi}{Definition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\title{Equivariant Neural Networks for chemistry.}
+\author{Caridad, Rodrigo}
+% let me add institution %
+\affil{University of Chicago}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+In this document we define the main mathematical concepts, and equations behind all the models that are described in the repo.
+
+\section{MLPs}
+
+\section{Invariance and Equivariance}
+
+For simplicity we will consider the \(n\)-dimensional euclidean group \(\text{E}(n)\). Given a group element \(\epsilon \in \text{E}(n)\) we define its representation as the map \(\rho : \text{E}(n) \to \mathbb{R} ^ {n \times n}  \), where \(\rho(\epsilon)\) is a matrix.
+
+\begin{definition}
+    We say a function \(f : \mathbb{R}^n \to \mathbb{R}^n\) is \(\text{E}(n)\) invariant if for all \(x \in \mathbb{R}^n\) and all \(\epsilon \in \text{E}(n)\) we have that \(f(\rho(\epsilon)x) = f(x)\).
+\end{definition}
+
+Or in other words, The fuction maps all euclidean transformations of a given input to the same value.
+
+\begin{definition}
+    We say a function \(f : \mathbb{R}^n \to \mathbb{R}^n\) is \(\text{E}(n)\) equivariant if for all \(x \in \mathbb{R}^n\) and all \(\epsilon \in \text{E}(n)\) we have that \(f(\rho(\epsilon)x) = \rho(\epsilon)f(x)\).
+\end{definition}
+
+Which means the function maps a transformed value to another value transformed in the same way.
+
+\section{GNNs}
+
+\section{Equivariant GNNs}
+
+\end{document}
